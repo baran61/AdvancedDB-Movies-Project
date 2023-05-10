@@ -1,0 +1,40 @@
+<!ELEMENT accomodations (accomodation)+>
+<!ELEMENT accomodation (accomodationName, accomodationAddress, accomodationType, phoneNumber)>
+<!ELEMENT accomodationName (#PCDATA)>
+<!ELEMENT accomodationAddress (#PCDATA)>
+<!ELEMENT accomodationType (#PCDATA)>
+<!ELEMENT phoneNumber (#PCDATA)>
+
+
+
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="accomodations">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element ref="accomodation"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="accomodation">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="accomodationName" type="xsd:string" />
+<xsd:element name="accomodationAddress" type="xsd:string" />
+<xsd:element name="accomodationType" type="xsd:string" />
+<xsd:element name="phoneNumber" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<accomodations>
+<accomodation>
+<accomodationName>hotel 1</accomodationName>
+<accomodationAddress>address 1</accomodationAddress>
+<accomodationType>Hostel</accomodationType>
+<phoneNumber>1111111111</phoneNumber>
+</accomodation>
+</accomodations>

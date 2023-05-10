@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE activities SYSTEM 'activities.dtd'>
+<activities>
+<activity>
+<activityId>activity101</activityId>
+<activityName>Surfing</activityName>
+<activityTarrif>Euro 50</activityTarrif>
+</activity>
+<activity>
+<activityId>activity102</activityId>
+<activityName>Garden Visit</activityName>
+<activityTarrif>Euro 5</activityTarrif>
+</activity>
+</activities>

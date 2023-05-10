@@ -1,0 +1,39 @@
+<!ELEMENT transits (transit)+>
+<!ELEMENT transit (transitType, transitMode, transitSource, transitDestination)>
+<!ELEMENT transitType (#PCDATA)>
+<!ELEMENT transitMode (#PCDATA)>
+<!ELEMENT transitSource (#PCDATA)>
+<!ELEMENT transitDestination (#PCDATA)>
+
+
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="transits">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element ref="transit"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="transit">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="transitType" type="xsd:string" />
+<xsd:element name="transitMode" type="xsd:string" />
+<xsd:element name="transitSource" type="xsd:string" />
+<xsd:element name="transitDestination" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<transits>
+<transit>
+<transitType>1</transitType>
+<transitMode>CAB</transitMode>
+<transitSource>source</transitSource>
+<transitDestination>destination</transitDestination>
+</transit>
+</transits>

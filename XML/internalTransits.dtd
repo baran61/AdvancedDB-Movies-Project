@@ -1,0 +1,40 @@
+<!ELEMENT internalTransits (internalTransit)+>
+<!ELEMENT internalTransit (internalTransitservice, internalTransitType, internalTransitDriversPlate, contactNumber)>
+<!ELEMENT internalTransitservice (#PCDATA)>
+<!ELEMENT internalTransitType (#PCDATA)>
+<!ELEMENT internalTransitDriversPlate (#PCDATA)>
+<!ELEMENT contactNumber (#PCDATA)>
+
+
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="internalTransits">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element ref="internalTransit"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="internalTransit">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="internalTransitservice" type="xsd:string" />
+<xsd:element name="internalTransitType" type="xsd:string" />
+<xsd:element name="internalTransitDriversPlate" type="xsd:string" />
+<xsd:element name="contactNumber" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<internalTransits>
+<internalTransit>
+<internalTransitservice>1</internalTransitservice>
+<internalTransitType>CAB</internalTransitType>
+<internalTransitDriversPlate>XXXXXX</internalTransitDriversPlate>
+<contactNumber>1111111111</contactNumber>
+</internalTransit>
+</internalTransits>

@@ -1,0 +1,41 @@
+<!ELEMENT activities (activity)+>
+<!ELEMENT activity (activityId, activityName, activityTarrif)>
+<!ELEMENT activityId (#PCDATA)>
+<!ELEMENT activityName (#PCDATA)>
+<!ELEMENT activityTarrif (#PCDATA)>
+
+
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="activities">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element ref="activity"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="activity">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="activityId" type="xsd:int" />
+<xsd:element name="activityName" type="xsd:string" />
+<xsd:element name="activityTarrif" type="xsd:string" />
+</xsd:sequence> 
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<activities>
+<activity>
+<activityId>101</activityId>
+<activityName>Surfing</activityName>
+<activityTarrif>Euro 50</activityTarrif>
+</activity>
+<activity>
+<activityId>102</activityId>
+<activityName>Garden Visit</activityName>
+<activityTarrif>Euro 5</activityTarrif>
+</activity>
+</activities>
